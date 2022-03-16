@@ -1,0 +1,15 @@
+int main() {
+	// initialize 2 message queue
+	int running = 1;	
+
+	while(running){
+		// check if inputted too much characters
+		// if not, send command to server
+		
+		if (command == "end") running = 0;
+
+		//receive result or messages from server
+		// print out the messages or results to the client
+	}
+	//delete the message queue used to receving result from server
+}

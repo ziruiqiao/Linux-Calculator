@@ -1,0 +1,72 @@
+int main()
+{
+	int timeResult[6];
+	int running = 1;
+	
+	// initializing 2 message queues
+	while(running){
+		//receive command from client
+		char* temp = DoCommand(command.text, timeResult);
+		
+		//print the average time of operation if possible
+		// if(command.text == end) running = 0;
+	}
+	//delete the message queue used to receive commands.
+}
+
+char* DoCommand(char* command, int timeResult[]) {
+	struct timeval start, end;
+	// start calculate time
+	gettimeofday(&start, NULL);
+
+	// start check command
+	if(command == "Insert) {
+		// if command wrong, return message
+		// insert the number to the calculator
+		// arrange the list of number from small to large
+		getTime(start, end, timeResult, command);
+	} else if(command == "Delete")  {
+		//if command wrong, return message
+		// delete the number from the calculator
+		getTime(start, end, timeResult, command);
+	} else if(command == "Average") {
+		//if command wrong, return message
+		// calculate the aveage of numbers in calculator
+		getTime(start, end, timeResult, command);
+	} else if(command == "Median") {
+		//if command wrong, return message
+		//calculate the median of numbers in calculator
+		getTime(start, end, timeResult, command);
+	} else if(command == "Min") {
+		//if command wrong, return message
+		// get the minimum of numbers in calculator
+		getTime(start, end, timeResult, command);
+	} else if(command == "Sum") {
+		//if command wrong, return message
+		// calculate the sum of numbers in calculator
+		getTime(start, end, timeResult, command);
+	} else{
+		getTime(start, end, timeResult, command);
+	}
+	// return message to the main
+}
+
+void getTime(struct timeval start, struct timeval end, int timeResult[], char *command) {
+	gettimeofday(&end, NULL);
+	int result = //end-start;
+	if(command == "Insert) {
+		timeResult[0] = result;
+	} else if(command == "Delete")  {
+		timeResult[1] = result;
+	} else if(command == "Average") {
+		timeResult[2] = result;
+	} else if(command == "Median") {
+		timeResult[3] = result;
+	} else if(command == "Min") {
+		timeResult[4] = result;
+	} else if(command == "Sum") {
+		timeResult[5] = result;
+	}
+	printf(" took %1d micro seconds\n", result);
+}
+	
